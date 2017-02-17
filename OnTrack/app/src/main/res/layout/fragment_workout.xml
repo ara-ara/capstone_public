@@ -1,0 +1,72 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="60dip"
+    android:paddingTop="10dip"
+    tools:context=".workout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainLayout">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Workout Name"
+            android:ems="10"
+            android:id="@+id/workoutName"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorlight"
+            android:textColorHint="@color/colorlight"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:hint="Date"
+            android:id="@+id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/workoutName"
+            android:textColor="@color/colorlight"
+            android:textColorHint="@color/colorlight"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:id="@+id/create"
+            android:textColor="@color/white"
+            android:background="@color/colorlight"
+            android:layout_below="@+id/date"
+            android:layout_alignEnd="@+id/date"
+            android:layout_marginTop="10dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Exercise"
+            android:id="@+id/addExercise"
+            android:textColor="@color/white"
+            android:background="@color/colorlight"
+            android:layout_below="@+id/date"
+            android:layout_marginTop="10dp"
+            android:layout_alignStart="@+id/date" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/create">
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

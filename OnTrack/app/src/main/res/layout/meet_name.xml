@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/workoutContainerContainer"
+android:layout_height="wrap_content"
+android:layout_width="fill_parent"
+android:weightSum="5"
+android:orientation="horizontal"
+android:layout_alignParentStart="true"
+android:layout_marginTop="25dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:ems="10"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:id="@+id/date"
+        android:textColor="@color/colorlight"
+        android:text="Date"
+        android:layout_weight = "1" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:ems="10"
+        android:layout_centerVertical="true"
+        android:id="@+id/meet"
+        android:textColor="@color/colorlight"
+        android:text="Meet"
+        android:layout_weight = "3"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View"
+        android:ems="10"
+        android:id="@+id/view"
+        android:background="@color/colorlight"
+        android:textColor="@color/white"
+        android:layout_weight = "1"
+        android:layout_marginRight="10dp"/>
+
+</LinearLayout>

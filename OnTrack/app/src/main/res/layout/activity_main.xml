@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="capstone.ontrack.MainActivity"
+    android:background="@color/colorPrimary"
+    android:theme="@style/AppTheme">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorlight"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@mipmap/ic_launcher"
+        android:elevation="4dp"
+        app:title="OnTrack"
+        />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/my_toolbar"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainLayout">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create New Account"
+                android:id="@+id/account"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"
+                android:background= "@android:color/transparent"
+                android:textAllCaps="false"
+                android:onClick="createAccount"
+                android:textStyle="normal"
+                android:textColor="@color/colorlight"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Email"
+                android:id="@+id/textView"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/account"
+                android:layout_alignStart="@+id/loginEmail"
+                android:textColor="@color/colorlight"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Password"
+                android:id="@+id/textView2"
+                android:layout_marginTop="90dp"
+                android:layout_below="@+id/textView"
+                android:layout_alignStart="@+id/textView"
+                android:textColor="@color/colorlight" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/loginEmail"
+                android:layout_below="@+id/textView"
+                android:layout_alignStart="@+id/loginPassword"
+                android:textColor="@color/colorlight"/>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/loginPassword"
+                android:textColor="@color/colorlight"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:id="@+id/login"
+                android:layout_below="@+id/loginPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:onClick="verifyAccount"
+                android:background="@color/colorlight"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

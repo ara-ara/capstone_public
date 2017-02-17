@@ -1,0 +1,72 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="60dip"
+    android:paddingTop="10dip"
+    tools:context=".practice">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainLayout">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Practice Focus"
+            android:ems="10"
+            android:id="@+id/name"
+            android:textColor="@color/colorlight"
+            android:textColorHint="@color/colorlight"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/date"
+            android:hint="Date"
+            android:textColor="@color/colorlight"
+            android:textColorHint="@color/colorlight"
+            android:layout_below="@id/name"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:id="@+id/create"
+            android:layout_below="@+id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorlight"
+            android:textColor="@color/white"/>
+
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/create">
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_add"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/container"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorlight"
+            android:tint="@color/white"/>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,47 @@
+Requests to the server look like this:
+
+-----------------------------------------------------------------
+For updates
+
+Client sends
+"put:user:email:something@something:password:12345"
+
+Server side looks like this
+"update user set email="something@something", password="12345" 
+where email="something@something"
+
+Then server sends response about whether it failed or worked
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+For validation
+
+Client sends
+"val:email:name@thing:password:pass"
+
+Server side looks like this
+"select exists(select * from user where email="name@thing" and 
+password="pass")
+
+If it worked server sends
+"Valid:userid_number"
+
+If it failed server sends
+"Failed"
+------------------------------------------------------------------
+
+-----------------------------------------------------------------
+Account creation
+
+Client sends
+"creat:field_1:data:field_2:data"
+
+Server side looks like this 
+Check if the email exists in the DB already
+If already exists
+"Failed:email"
+
+If does not exist 
+Need to calculate next UID number using count first
+// null for non-provided values
+"insert into user values('data', 'data')
